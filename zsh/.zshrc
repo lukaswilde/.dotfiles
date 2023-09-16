@@ -29,19 +29,16 @@ compinit -i
 # Use NVim instead of vim
 alias vim=nvim
 
-# Connect to university VPN
-alias vpn='echo "TheBest200" | sudo openconnect asa1.uni-saarland.de --user=s8luwild --passwd-on-stdin'
-
 #update tex tree
 alias textree='sudo texhash && sudo mktexlsr'
 
 # Apply pandoc with small margins
 alias pandoc="pandoc -V geometry:'top=1cm, right=1cm, left=1cm, bottom=2cm'"
 
-# Setting PATH for Python 3.7
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-export PATH
+# Setting PATH for Python 3.11
+export PATH=$PATH:/usr/lukas/bin/python3
+
+alias python=python3
 
 # --- Setting aliases to navigate to icloud folders
 
@@ -116,23 +113,9 @@ alias ic="cd $studium/SS23/IC"
 alias hiwi="cd $studium/SS23/HIWI"
 alias worktime="cd $personal/Arbeit:Steuer/HIWI_Hoffmann"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/lukas/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/lukas/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/lukas/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/lukas/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
-PYTHON_LIBRARY="/Users/lukas/Library/Mobile Documents/com~apple~CloudDocs/_Personal/Studium/SS23/HIWI/PlaJABenchmarks/python_library"
-NNET_LIBRARY="/Users/lukas/Library/Mobile Documents/com~apple~CloudDocs/_Personal/Studium/SS23/HIWI/PlaJABenchmarks"
+PYTHON_LIBRARY="/Users/lukas/dev/PlaJABenchmarks/python_library"
+NNET_LIBRARY="/Users/lukas/PlaJABenchmarks"
 
 if [ -z "$PYTHONPATH" ]; then
 export PYTHONPATH=${PYTHON_LIBRARY}
