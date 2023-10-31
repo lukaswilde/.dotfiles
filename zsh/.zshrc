@@ -35,10 +35,20 @@ alias textree='sudo texhash && sudo mktexlsr'
 # Apply pandoc with small margins
 alias pandoc="pandoc -V geometry:'top=1cm, right=1cm, left=1cm, bottom=2cm'"
 
+<<<<<<< HEAD
 # Setting PATH for Python 3.11
 export PATH=$PATH:/usr/lukas/bin/python3
 
 alias python=python3
+=======
+
+PATH="/opt/homebrew/bin/python3.11:${PATH}"
+#PATH="/Users/lukas/Library/Python/3.11/bin:${PATH}"
+export PATH
+>>>>>>> 3aa2451 (remove vpn alias, add WS23/24 AI lecture)
+
+alias python=python3
+alias pip=pip3
 
 # --- Setting aliases to navigate to icloud folders
 
@@ -113,9 +123,26 @@ alias ic="cd $studium/SS23/IC"
 alias hiwi="cd $studium/SS23/HIWI"
 alias worktime="cd $personal/Arbeit:Steuer/HIWI_Hoffmann"
 
+# WS 22/23
+alias ai="cd $studium/WS2324/AI"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/lukas/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/lukas/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/lukas/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/lukas/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 PYTHON_LIBRARY="/Users/lukas/dev/PlaJABenchmarks/python_library"
-NNET_LIBRARY="/Users/lukas/PlaJABenchmarks"
+NNET_LIBRARY="/Users/lukas/dev/PlaJABenchmarks"
 
 if [ -z "$PYTHONPATH" ]; then
 export PYTHONPATH=${PYTHON_LIBRARY}
