@@ -35,17 +35,10 @@ alias textree='sudo texhash && sudo mktexlsr'
 # Apply pandoc with small margins
 alias pandoc="pandoc -V geometry:'top=1cm, right=1cm, left=1cm, bottom=2cm'"
 
-<<<<<<< HEAD
 # Setting PATH for Python 3.11
-export PATH=$PATH:/usr/lukas/bin/python3
-
-alias python=python3
-=======
-
 PATH="/opt/homebrew/bin/python3.11:${PATH}"
 #PATH="/Users/lukas/Library/Python/3.11/bin:${PATH}"
 export PATH
->>>>>>> 3aa2451 (remove vpn alias, add WS23/24 AI lecture)
 
 alias python=python3
 alias pip=pip3
