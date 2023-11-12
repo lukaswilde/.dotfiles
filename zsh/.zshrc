@@ -116,8 +116,9 @@ alias ic="cd $studium/SS23/IC"
 alias hiwi="cd $studium/SS23/HIWI"
 alias worktime="cd $personal/Arbeit:Steuer/HIWI_Hoffmann"
 
-# WS 22/23
+# WS 23/24
 alias ai="cd $studium/WS2324/AI"
+alias rl="cd $studium/WS2324/RL"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -189,4 +190,6 @@ eval "$(starship init zsh)"
 PATH=$PATH:/usr/local/sbin
 
 # Add texlive directory to TEXINPUTS
-export TEXINPUTS=/usr/local/texlive/2022/texmf-dist/tex/latex//:$TEXINPUTS
+# export TEXINPUTS=/usr/local/texlive//:$TEXINPUTS
+export TEXINPUTS=/usr/local/texlive/2023/texmf-dist/tex//:$TEXINPUTS
+
