@@ -54,7 +54,7 @@ alias icloud="cd $icloud"
 alias personal="cd $icloud/_Personal"
 
 alias dev="cd /Users/lukas/dev"
-alias aoc="cd $icloud/dev/aoc"
+alias aoc="cd /Users/lukas/dev/aoc"
 alias drk="cd $icloud/_Personal/DRK"
 alias dl='cd /Users/lukas/Downloads'
 alias docs="cd $icloud/_Personal/Rechnungen\ \&\ Dokumente"
