@@ -120,6 +120,9 @@ alias worktime="cd $personal/Arbeit:Steuer/HIWI_Hoffmann"
 alias ai="cd $studium/WS2324/AI"
 alias rl="cd $studium/WS2324/RL"
 
+# SS 24
+alias master="cd $studium/SS24/Masterthesis"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/lukas/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
