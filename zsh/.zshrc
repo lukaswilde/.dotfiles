@@ -55,10 +55,10 @@ alias icloud="cd $icloud"
 
 alias personal="cd $icloud/_Personal"
 
-alias dev="cd /Users/lukas/dev"
-alias aoc="cd /Users/lukas/dev/aoc"
+alias dev="cd $HOME/dev"
+alias aoc="cd $HOME/dev/aoc"
 alias drk="cd $icloud/_Personal/DRK"
-alias dl='cd /Users/lukas/Downloads'
+alias dl="cd $HOME/Downloads"
 alias docs="cd $icloud/_Personal/Rechnungen\ \&\ Dokumente"
 
 # --- Setting aliases to quickly navigate to 'Studium' icloud folders
@@ -189,3 +189,10 @@ export TEXINPUTS=/usr/local/texlive/2024/texmf-dist/tex//:$TEXINPUTS
 
 
 export GUROBI_HOME=/Library/gurobi951/macos_universal2
+
+export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
+export MAGICK_HOME="$(brew --prefix)/opt/imagemagick"
+export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$MAGICK_HOME/lib:$DYLD_LIBRARY_PATH"
+export DYLD_FALLBACK_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+
+. "$HOME/.local/bin/env"
