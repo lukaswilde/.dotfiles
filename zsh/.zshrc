@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/lukas/.oh-my-zsh"
+export ZSH="/Users/lukaswilde/.oh-my-zsh"
 
 # Oh-my-zsh plugins
 plugins=(
@@ -7,9 +7,11 @@ plugins=(
 	vi-mode
 	you-should-use
 	zsh-syntax-highlighting
-	zsh-completions
+	# zsh-completions
 	zsh-autosuggestions
 )
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -45,7 +47,7 @@ alias pip=pip3
 
 # --- Setting aliases to navigate to icloud folders
 
-icloud="/Users/lukas/Library/Mobile\ Documents/com\~apple\~CloudDocs"
+icloud="/Users/lukaswilde/Library/Mobile\ Documents/com\~apple\~CloudDocs"
 studium="$icloud/_Personal/Studium"
 personal="$icloud/_Personal"
 
@@ -152,18 +154,18 @@ export PYTHONPATH=${PYTHONPATH}:${NNET_LIBRARY}
 # Bind C-K to clearing the terminal
 bindkey -s '^K' '^Mclear^M' 
 
-# Use exa instead of ls
+# Use eza instead of ls
 function ls() 
 {
   if [[ "$1" == -* ]]; then
-    exa --colour-scale -bghla -snew $2
+    eza --colour-scale -bghla -snew $2
   else
-    exa --colour-scale -bghla -snew $1
+    eza --colour-scale -bghla -snew $1
   fi
 }
 
-alias l="exa -bghl -snew"
-alias ll="exa -bghl -snew"
+alias l="eza -bghl -snew"
+alias ll="eza -bghl -snew"
 
 # Use trash instead of rm 
 alias rm="trash"
@@ -171,17 +173,6 @@ alias rm="trash"
 # Inlcude LLVM in the PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
-# CLion shortcut
-function clion()
-{
-  open -na "CLion.app" --args "$@"
-}
-
-# PyCharm shortcut
-function pycharm()
-{
-  open -na "PyCharm.app" --args "$@"
-}
 
 # Inlcude brew to path
 export PATH="/opt/homebrew/bin:$PATH"
@@ -194,5 +185,7 @@ PATH=$PATH:/usr/local/sbin
 
 # Add texlive directory to TEXINPUTS
 # export TEXINPUTS=/usr/local/texlive//:$TEXINPUTS
-export TEXINPUTS=/usr/local/texlive/2023/texmf-dist/tex//:$TEXINPUTS
+export TEXINPUTS=/usr/local/texlive/2024/texmf-dist/tex//:$TEXINPUTS
 
+
+export GUROBI_HOME=/Library/gurobi951/macos_universal2
