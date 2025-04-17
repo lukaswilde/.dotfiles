@@ -181,7 +181,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 eval "$(starship init zsh)"
 
 # Add rabbitmq to PATH
-PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/local/sbin
+
+export PATH=$PATH:/opt/homebrew/anaconda3/bin
 
 # Add texlive directory to TEXINPUTS
 # export TEXINPUTS=/usr/local/texlive//:$TEXINPUTS
