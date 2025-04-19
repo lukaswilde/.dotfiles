@@ -10,6 +10,7 @@ return {
                 -- null_ls.builtins.formatting.prettier,
                 -- null_ls.builtins.formatting.ruff,
                 null_ls.builtins.formatting.black,
+                null_ls.builtins.formatting.shfmt,
             },
             timout = 2000,
         })
