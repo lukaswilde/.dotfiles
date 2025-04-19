@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/lukaswilde/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Oh-my-zsh plugins
 plugins=(
@@ -125,31 +125,6 @@ alias rl="cd $studium/WS2324/RL"
 # SS 24
 alias master="cd $studium/SS24/Masterthesis"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/lukas/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/lukas/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/lukas/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/lukas/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-PYTHON_LIBRARY="/Users/lukas/dev/PlaJABenchmarks/python_library"
-NNET_LIBRARY="/Users/lukas/dev/PlaJABenchmarks"
-
-if [ -z "$PYTHONPATH" ]; then
-export PYTHONPATH=${PYTHON_LIBRARY}
-else
-export PYTHONPATH=${PYTHONPATH}:${PYTHON_LIBRARY}
-fi
-
-export PYTHONPATH=${PYTHONPATH}:${NNET_LIBRARY}
 
 # Bind C-K to clearing the terminal
 bindkey -s '^K' '^Mclear^M' 
@@ -167,12 +142,8 @@ function ls()
 alias l="eza -bghl -snew"
 alias ll="eza -bghl -snew"
 
-# Use trash instead of rm 
-alias rm="trash"
-
 # Inlcude LLVM in the PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
-
 
 # Inlcude brew to path
 export PATH="/opt/homebrew/bin:$PATH"
@@ -180,21 +151,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 # Use starship prompt
 eval "$(starship init zsh)"
 
-# Add rabbitmq to PATH
-export PATH=$PATH:/usr/local/sbin
-
-export PATH=$PATH:/opt/homebrew/anaconda3/bin
-
 # Add texlive directory to TEXINPUTS
 # export TEXINPUTS=/usr/local/texlive//:$TEXINPUTS
 export TEXINPUTS=/usr/local/texlive/2024/texmf-dist/tex//:$TEXINPUTS
-
-
-export GUROBI_HOME=/Library/gurobi951/macos_universal2
-
-export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
-export MAGICK_HOME="$(brew --prefix)/opt/imagemagick"
-export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$MAGICK_HOME/lib:$DYLD_LIBRARY_PATH"
-export DYLD_FALLBACK_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_FALLBACK_LIBRARY_PATH"
-
-. "$HOME/.local/bin/env"
