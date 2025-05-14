@@ -47,7 +47,7 @@ alias pip=pip3
 
 # --- Setting aliases to navigate to icloud folders
 
-icloud="/Users/lukaswilde/Library/Mobile\ Documents/com\~apple\~CloudDocs"
+icloud="$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs"
 studium="$icloud/_Personal/Studium"
 personal="$icloud/_Personal"
 
