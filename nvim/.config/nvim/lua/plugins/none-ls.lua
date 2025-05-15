@@ -24,6 +24,6 @@ return {
             command = "lua vim.lsp.buf.format({async = true})",
         })
 
-        vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {})
+        vim.keymap.set("n", "<leader>fb", vim.lsp.buf.format, { desc = "Format buffer" })
     end,
 }
