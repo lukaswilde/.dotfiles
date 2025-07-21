@@ -7,6 +7,7 @@ vim.api.nvim_set_keymap('n', '<leader>d]', '<cmd>lua vim.diagnostic.goto_next()<
 vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 vim.diagnostic.config({
+    virtual_text = true,
     signs = {
         text = {
             [vim.diagnostic.severity.ERROR] = " ",
