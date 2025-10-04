@@ -148,6 +148,8 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # Inlcude brew to path
 export PATH="/opt/homebrew/bin:$PATH"
 
+export PATH="/Users/lukas/.local/bin:$PATH"
+
 # Use starship prompt
 eval "$(starship init zsh)"
 
