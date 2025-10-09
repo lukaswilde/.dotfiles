@@ -45,23 +45,25 @@ export PATH
 alias python=python3
 alias pip=pip3
 
-# --- Setting aliases to navigate to icloud folders
+# --- Setting aliases to navigate to Proton Drive folders
 
-icloud="$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs"
-studium="$icloud/_Personal/Studium"
-personal="$icloud/_Personal"
+alias dotfiles="cd ~/.dotfiles"
 
-alias icloud="cd $icloud"
+drive="$HOME/Library/CloudStorage/ProtonDrive-lukaswilde@proton.me-folder/"
+studium="$drive/_Personal/Studium"
+personal="$drive/_Personal"
 
-alias personal="cd $icloud/_Personal"
+alias drive="cd $drive"
+
+alias personal="cd $drive/_Personal"
 
 alias dev="cd $HOME/dev"
 alias aoc="cd $HOME/dev/aoc"
-alias drk="cd $icloud/_Personal/DRK"
+alias drk="cd $drive/_Personal/DRK"
 alias dl="cd $HOME/Downloads"
-alias docs="cd $icloud/_Personal/Rechnungen\ \&\ Dokumente"
+alias docs="cd $drive/_Personal/Rechnungen\ \&\ Dokumente"
 
-# --- Setting aliases to quickly navigate to 'Studium' icloud folders
+# --- Setting aliases to quickly navigate to 'Studium' drive folders
 
 # WS 19/20
 alias dsai="cd $studium/WS19\:20/DSAI"
