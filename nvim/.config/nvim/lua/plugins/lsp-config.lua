@@ -15,6 +15,7 @@ return {
                     "ts_ls",
                     "rust_analyzer",
                     "html",
+                    "gopls",
                     "pyright",
                     "pylsp",
                     "bashls",
@@ -47,6 +48,7 @@ return {
             vim.lsp.enable("ruff")
             vim.lsp.enable("pylsp")
             vim.lsp.enable("html")
+            vim.lsp.enable("gopls")
             -- vim.lsp.enable("pyright")
             vim.lsp.enable("ts_ls")
             vim.lsp.enable("rust_analyzer")
