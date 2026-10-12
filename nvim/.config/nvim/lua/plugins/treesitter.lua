@@ -5,6 +5,7 @@ return {
         require("nvim-treesitter").setup({
             ensure_installed = { "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
             auto_install = true,
+            highlight = { enable = true, disable = { "latex" } },
             indent = { enable = true },
         })
         -- local config = require("nvim-treesitter.configs")
