@@ -1,14 +1,32 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Setup completions directory
+fpath=($HOME/.config/completions $fpath)
+
+# Enable completion system
+autoload -U compinit
+
+# Initialize all completions
+compinit -i
+
+export ZOXIDE_CMD_OVERRIDE=cd
+
 # Oh-my-zsh plugins
 plugins=(
 	git
 	vi-mode
 	you-should-use
-	zsh-syntax-highlighting
-	# zsh-completions
+    sudo
 	zsh-autosuggestions
+    colored-man-pages
+    history-substring-search
+    kubectl
+    docker
+    docker-compose
+    fzf-tab
+    zoxide
+	zsh-syntax-highlighting
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -19,14 +37,6 @@ source $ZSH/oh-my-zsh.sh
 # My additions to oh-my-zsh
 # ---------------------------------------------------------------------
 
-# Setup completions directory
-fpath=($HOME/.config/completions $fpath)
-
-# Enable completion system
-autoload -U compinit
-
-# Initialize all completions
-compinit -i
 
 # Use NVim instead of vim
 alias vim=nvim
@@ -135,9 +145,9 @@ bindkey -s '^K' '^Mclear^M'
 function ls() 
 {
   if [[ "$1" == -* ]]; then
-    eza --colour-scale -bghla -snew $2
+    eza --color-scale -bghla -snew $2
   else
-    eza --colour-scale -bghla -snew $1
+    eza --color-scale -bghla -snew $1
   fi
 }
 
