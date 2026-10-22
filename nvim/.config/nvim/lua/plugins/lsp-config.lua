@@ -20,6 +20,7 @@ return {
                     "pylsp",
                     "bashls",
                     "texlab",
+                    "yamlls",
                 },
             })
         end,
@@ -54,6 +55,7 @@ return {
             vim.lsp.enable("rust_analyzer")
             vim.lsp.enable("bashls")
             vim.lsp.enable("texlab")
+            vim.lsp.enable("yamlls")
 
             vim.lsp.config("*", {
                 capabilities = capabilities,
